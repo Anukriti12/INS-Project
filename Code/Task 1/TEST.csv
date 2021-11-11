@@ -1,0 +1,619 @@
+,Labels,Text
+0,0,Low - profile information - stealing Trojan is used only against high- value targets .
+1,0,Symantec has uncovered an elusive Trojan used by the cyberespionage group behind the € œDuke € ​ family of malware .
+2,0,Seaduke ( detected by Symantec as Trojan . Seaduke ) is a low - profile information- stealing Trojan which appears to be reserved for attacks against a small number of high - value targets .
+3,0,"Seaduke has been used in attacks against a number of major , government - level targets ."
+4,0,The malware hides behind numerous layers of encryption and obfuscation and is capable of quietly stealing and exfiltrating sensitive information such as email from the victim € ™s computer .
+5,0,Seaduke has a highly configurable framework and Symantec has already found hundreds of different configurations on compromised networks .
+6,0,Its creators are likely to have spent a considerable amount of time and resources in preparing these attacks and the malware has been deployed against a number of high - level government targets .
+7,0,"While the Duke group began to distribute Cozyduke in an increasingly aggressive manner , Seaduke installations were reserved only for select targets ."
+8,1,"Seaduke victims are generally first infected with Cozyduke and , if the computer appears to be a target of interest , the operators will install Seaduke ."
+9,0,"The group behind Seaduke is a cyberespionage operation that is responsible for a series of attacks against high - profile individuals and organizations in government , international policy and private research in the United States and Europe ."
+10,0,"It has a range of malware tools at its disposal , known as the Dukes , including Cozyduke ( Trojan . Cozer ) , Miniduke ( Backdoor . Miniduke ) and Cosmicduke ( Backdoor . Tinybaron ) ."
+11,0,"News of the Duke group first emerged in March and April of 2015 , when reports detailing attacks involving a sophisticated threat actor variously called Office Monkeys , EuroAPT , Cozy Bear , and Cozyduke were published ."
+12,0,Symantec believes that this group has a history of compromising governmental and diplomatic organizations since at least 2010 .
+13,0,"The group began its current campaign as early as March 2014 , when Trojan . Cozer ( aka Cozyduke ) was identified on the network of a private research institute in Washington , D.C."
+14,1,"In the months that followed , the Duke group began to target victims with € œOffice Monkeys € ​- and € œeFax € ​-themed emails , booby - trapped with a Cozyduke payload ."
+15,0,These tactics were atypical of a cyberespionage group .
+16,0,"It € ™s quite likely these themes were deliberately chosen to act as a smokescreen , hiding the true intent of the adversary ."
+17,0,"The Duke group has mounted an extended campaign targeting high - profile networks over extended periods , something which is far beyond the reach of the majority of threat actors ."
+18,0,Its capabilities include .
+19,0,"Attack infrastructure leveraging hundreds of compromised websites Rapidly developed malware frameworks in concurrent use Sophisticated operators with fine - tuned computer network exploitation ( CNE ) skills Although Cozyduke activity was first identified in March 2014 , it wasn € ™t until July that the group managed to successfully compromise high - profile government networks ."
+20,0,Cozyduke was used throughout these attacks to harvest and exfiltrate sensitive information to the attackers .
+21,0,"In parallel , the Duke group was also installing separate malware onto these networks , namely Backdoor . Miniduke and the more elusive Trojan . Seaduke ."
+22,0,It could use these payloads to exploit networks on multiple fronts and providing it with additional persistence mechanisms .
+23,1,"In July of 2014 , the group instructed Cozyduke - infected computers to install Backdoor . Miniduke onto a compromised network ."
+24,0,Miniduke has been the group € ™s tool of choice for a number of years in espionage operations predominantly targeting government and diplomatic entities in Eastern Europe and ex - Soviet states .
+25,0,"€ œNemesis Gemina € ​ appears to be the internal name for the framework used by the group to identify the project , previously reported by Kaspersky ."
+26,0,The following debug string was present in the sample used in these attacks .
+27,0,"C:\Projects\nemesis - gemina\nemesis\bin\carriers\ezlzma_x86_exe.pdb This project name has been seen in Backdoor . Tinybaron ( aka Cosmicduke ) samples , which Symantec also attributes to the Duke group ."
+28,0,This deployment of Miniduke and the technical similarities with Cozyduke provided strong indicators as to who was behind the attacks .
+29,0,The Seaduke payload These attacks were already well underway when another group began to deploy a previously unknown piece of malware .
+30,0,"In October 2014 , the Seaduke payload began to appear within target networks ."
+31,0,"Although Seaduke was developed in Python , the overall framework bears a striking resemblance to Cozyduke in terms of operation ."
+32,0,It € ™s unclear why the attackers waited until October to deploy Seaduke .
+33,0,"Was it reserved for a more specific attack ? Was part of their cover blown , necessitating the use of an alternative framework ? The Seaduke framework was designed to be highly configurable ."
+34,0,Hundreds of reconfigurations were identified on compromised networks .
+35,0,"The communication protocol employed had many layers of encryption and obfuscation , using over 200 compromised web servers for command and control ."
+36,0,Seaduke required a significant investment of time and resources in the preparatory and operational phases of the attack .
+37,1,"The attackers control Cozyduke via compromised websites , issuing instructions to infected machines by uploading € œtasks € ​ to a database file ."
+38,1,Cozyduke will periodically contact these websites to retrieve task information to be executed on the local machine .
+39,1,One such task ( an encoded PowerShell script ) instructed Cozyduke to download and execute Seaduke from a compromised website .
+40,0,Seaduke operation The attackers can operate Seaduke in a broadly similar fashion to Cozyduke .
+41,0,"The Seaduke control infrastructure is essentially distinct , opening up the possibility of sub - teams concurrently exploiting the target network ."
+42,1,"Unlike Cozyduke , Seaduke operators upload € œtask € ​ files directly to the command- and - control ( C&C ) server ; there is no database as such present ."
+43,0,"Seaduke securely communicates with the C&C server over HTTP / HTTPS beneath layers of encoding ( Base64 ) and encryption ( RC4 , AES ) ."
+44,0,"To an untrained eye , the communications look fairly benign , no doubt an effort to stay under the radar on compromised networks ."
+45,0,Seaduke has many inbuilt commands which are available to the attackers .
+46,1,"They have the ability to retrieve detailed bot / system information , update bot configuration , upload files , download files , and self- delete the malware from the system ."
+47,0,The self - delete function is interestingly called € œseppuku € ​.
+48,0,This is a form of Japanese ritual suicide .
+49,0,The attackers have also developed a number of additional payloads .
+50,0,Operators can push these payloads onto infected machines for very specific attacks .
+51,0,What next ? The Duke group has brought its operational capability to the next level .
+52,0,"Its attacks have been so bold and aggressive , that a huge amount of attention has been drawn to it , yet it appears to be unperturbed ."
+53,0,Its success at compromising such high - profile targets has no doubt added a few feathers to its cap .
+54,0,"Even the developers reveled in this fact , naming one of Seaduke € ™s functions € œforkmeiamfamous € ​."
+55,0,"While the group is currently keeping a lower profile , there € ™s no doubt it will reappear ."
+56,0,"Some tools may have to be abandoned , some reworked and others built completely from scratch ."
+57,0,This attack group is in it for the long haul .
+58,0,"Over the past several months an increasing number of strategic web compromises ( "" wateringholes "" ) have been discovered on websites in Hong Kong ."
+59,0,This rise in activity coincides with the Occupy Central protests .
+60,0,"In this post we will talk about a single attack , whilst not trying to distract attention from the vast number of attacks and subsequent compromises that remain persistent in Hong Kong ."
+61,0,Whilst going about our daily business we were alerted to a website that began serving a malicious payload alongside its usual web page .
+62,0,The initial investigation revealed that the attack and associated payloads are part of an ongoing attack campaign by an Advanced Persistent Threat group that is known to target various sectors of industry and Government in Hong Kong .
+63,0,In this instance we have chosen to obfuscate details of the compromised website to protect the identity of the victim .
+64,0,"This website belongs to a private educational institution who , since being notified about the compromise , has removed the malicious executable and remediated the compromised of their server , thus breaking a crucial link in the chain of this attack ."
+65,0,The website in question was implanted with some HTML code that simply reaches out to a secondary website and downloads malware .
+66,0,Whilst this in itself is not interesting the methodology used to obfuscate code and evade detection are .
+67,0,"The underlying code in the first page that loads exploits a vulnerability in Internet Explorer ( CVE-2014 - 6332 ) and runs several scripts , each with support for different operating systems and methods of downloading and executing a file from a website ."
+68,0,"The first script is obfuscated Visual Basic Script ( "" VBS "" ) By decoding this we can see the true intentions of the script – which opens a whole new can of worms ."
+69,0,This code is extremely interesting because not only does it contain VBScript but also contains PowerShell script .
+70,1,Once running it uses an elaborate way to detect the operating system version and then selects whether to use VBScript or Powershell based on the result ; VBScript for Windows XP and Powershell for newer versions of Windows .
+71,0,The Powershell script is compressed and Base64 encoded .
+72,1,By decoding this script we can determine its nature As you can see this powershell script simply extracts another VBScript and executes it .
+73,0,The VBScript then downloads the first binary payload into the user 's temporary directory and names it ' plug.exe ' .
+74,0,If the operating system version is too old to support Powershell then the script will attempt to use VBScript .
+75,1,"This VBScript downloads the primary payload to the temporary directory and names it "" z1.exe "" ."
+76,1,The first binary payload that lands on the system is relatively simple and serves as a method of yet again detecting the operating system version and where to drop a secondary payload file .
+77,1,Whilst this binary is not complicated by nature it has been designed to masquerade as a legitimate application and contains functionality to evade anti - virus .
+78,0,This malware implant is commonly detected by anti- virus as Swisyn .
+79,1,"Upon running this malware determines the operating system version , but only delineating between Windows XP , Visa and above ."
+80,0,It appears that this functionality is included because the secondary payload comes in both 32bit and 64bit versions .
+81,0,"Both of these second stage payloads are obfuscated but decoded with a simple bitwise operation as per below In this scenario , the secondary payloads can be decoded using a simple subtraction of 3 followed by an XOR of 3 from each byte ."
+82,0,This file is then written to % User%\Application Data\Microsoft in a newly created folder name ' wuauclt ' .
+83,0,"The filename depends on the operating system version , for Windows XP it is "" clbcatq.dll "" , for Windows Vista and above it is "" profapi.dll "" ."
+84,0,Once this file has been written to disk a file from the Windows System32 folder is copied into the directory .
+85,0,"This file , named ' wuauclt.exe ' , is the Windows update client interface and it a standard windows file ."
+86,1,By executing this file in a specific manner it will load the freshly dropped DLL file – affectively this is known as DLL hijacking .
+87,1,"Following this action another file , named ' wuauclt.dat ' , is written on to the disk under the same directory ."
+88,0,This file is encoded and not decoded at this stage of the attack .
+89,1,To complete the file drop wuauclt.exe is executed .
+90,0,The 64bit version of this dropper is vastly similar in functionality although it offers slightly more efficiency in the code .
+91,0,"The decoding routine is more simplified than its 32bit counterpart and the decoding key is hardcoded The following pseudo - code can decode both 32bit and 64bit versions of the DLL stored in ' wuauclt.dat ' Not to dwell on a dropper , let 's move on to the second stage malware ."
+92,0,The malware second stage is now loaded and running .
+93,0,"Interestingly , this payload is also detected by anti - virus as Swisyn ."
+94,0,This DLL is again fairly simple and acts as a secondary dropper .
+95,1,It primarily serves as a method of decoding one of the files dropped by the previous malware stage and creating a method to start the malware on system boot - up or user login .
+96,0,"In order to do this the malware firstly decodes a file that was dropped by the previous stage – in this case it is "" wuauclt.dat "" ."
+97,1,"The decoding routine is again overly complex but ultimately amounts to a simple subtraction and XOR , again both of these operations are performed by the number 3 , thus each byte is subtracted by 3 and then XOR'd with 3 Once this file has been decoded it is loaded into memory and executed ."
+98,0,"This file , once decoded is the third and final payload ."
+99,1,The method of leaving the encoded file on disk and only decoding it in memory is to thwart poorly configured anti - virus or disk surface heuristic scanners .
+100,0,"Finally to wrap up , an entry is created in the registry named ' wuauclt ' is created under ' HKCU\Software\Microsoft\Windows\Current Version\Run ' to ensure that this file is executed upon user - login ."
+101,0,Finally we are left with a full payload .
+102,0,"Unsurprisingly the 3rd and final stage of this part of the attack is a fully fledged RAT ( Remote Administration Tool ) , which is detected by anti - virus as PCClient ."
+103,1,This RAT allows the attacker to control the infected workstation and perform a vast array of administrative functions such as .
+104,0,"A high - level view of the command structure gives us an idea as to how simple this functionality can seem , but does not turn away from how damaging the affects can be ."
+105,1,"Once the RAT has been loaded on the infected machine it begins calling out to the command and control server ( "" phoning home "" ) and waits for the attackers to issue one of the above commands to the victim ."
+106,0,"As we usually see with APT attacks the malware controllers use a specific ID to code their attack campaign , which in this case is ' C00BBB ' ."
+107,1,Information about the victim system is collected and posted off to the command and control server .
+108,0,This information gives the attacker a brief description about the machine .
+109,0,The information consists of .
+110,1,This information is encoded using a simple bitwise operation and then sent to the command and control server .
+111,0,For example .
+112,0,Unencoded data Encoded data 44 45 4C 4C 2D 31 37 38 DELL-178 BA B9 B2 B2 51 4D 47 46 QMGF 44 33 43 00 00 00 00 00 D3C .....
+113,0,BA 4B BB 7E 7E 7E 7E 7E K ~~~~~ 00 00 00 00 00 00 00 00 ........
+114,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+115,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+116,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+117,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+118,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+119,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 35 31 32 4D 42 00 00 00 512 MB ...
+120,0,49 4D 4C B1 BC 7E 7E 7E IML ~~~ 00 00 00 00 00 00 00 00 ........
+121,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+122,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+123,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 57 69 6E 20 58 50 20 53 Win XP S A7 95 90 5E A6 AE 5E AB ••^ ^ 50 33 20 28 42 75 69 6C P3 ( Buil AE 4B 5E 56 BC 89 95 92 K^V ‰• ' 64 20 32 36 30 30 29 00 d 2600 ) .
+124,0,9A 5E 4C 48 4E 4E 55 7E š^LHNNU~ 00 00 00 00 00 00 00 00 ........
+125,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+126,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+127,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+128,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 00 00 00 00 00 00 00 00 ........
+129,0,7E 7E 7E 7E 7E 7E 7E 7E ~~~~~~~~ 43 30 30 42 42 42 00 00 C00BBB ..
+130,0,BB 4E 4E BC BC BC 7E 7E NN ~~ Whilst this may seem to make the data harder to recover it actually makes detection of the traffic easier .
+131,0,To decode the traffic a simple calculation can be performed by reversing the encoding operations .
+132,0,"In this case the malware simply increases the initial encoding key by 1 , then adds this value to each byte in the buffer and finally XOR 's each byte ."
+133,0,"Once again , the following pseudo - code can decode this data During in the investigation we performed analysis of the infrastructure that this malware communicates with ."
+134,0,"On this occasion we have not been able to gain physical access to the command and control server as it is legitimate , but compromised production infrastructure ."
+135,0,The graph below shows the flow in which various parts of the attack are loaded and how they chain together .
+136,0,This attack can be detected and/or mitigated at each stage .
+137,0,In order to help organisations protect themselves we have created a number of network IDS rules and disk - scan rules that can be used with Snort and Yara .
+138,0,Rules are provided in a best - effort basis and we can not vouch for their efficiency in your environment .
+139,0,"Wateringhole code Encoded version of PcClient PcClient malware beaconing alert tcp $ HOME_NET any - > $ EXTERNAL_NET [ 80,443 ] ( msg:""MALWARE – DTL ID 12012015 - PcClient beacon "" ; flow : established , to_server ; content:""|BB 4E 4E BC BC BC 7E 7E| "" ; nocase ; offset:160 ; depth:8 ; classtype : trojan - activty ; sid : YOUR_SID ; rev:20122014 ; ) Malware domain alert udp $ HOME_NET any - > $ EXTERNAL_NET 53 ( msg:""MALWARE - DTL ID 12012015 - C2 Domain "" ; content:""|06|aoemvp|03|com "" ; classtype : trojan - activity ; sid : YOUR_SID ; rev : 20122014 ; ) C2 server IP # 1 alert ip $ HOME_NET any < > 45.64.74.101 any ( msg:""MALWARE - DTL ID 12012015 – C2 IP Address "" ; classtype : trojan - activity ; sid : YOUR_SID ; rev : 20122014 ; ) C2 server IP # 2 alert ip $ HOME_NET any < > 103.229.127.104 any ( msg:""MALWARE - DTL ID 12012015 - C2 IP Address "" ; classtype : trojan - activity ; sid : YOUR_SID ; rev : 20122014 ; ) The following artefacts were found during the investigation MD5s Network artefacts a6a18c846e5179259eba9de238f67e41 c.aoemvp.com 55f84d88d84c221437cd23cdbc541d2e aoemvp.com a6a18c846e5179259eba9de238f67e41 lim.kiu@hotmail.com 279ef79f904476ba0f9f44c87358bb1f 45.64.74.101 42b76c0503a6bf21f1ea86e0b14d67ea 103.229.127.104 cff25fe24a90ef63eaa168c07008c2bb ad17eff26994df824be36db246c8fb6a f66b64ef984ac46ac7395358059979bc efd9dc39682312d6576468f5c0eb6236 For all questions relating to the publication or specifics in this document please contact us via one of the following methods ."
+140,0,"Twitter : @dragonthreatlab Website : http://dragonthreat.blogspot.hk Email : dragonthreatlabs@gmail.com Kind regards , Dan Dragon Threat Labs"
+141,0,Energetic Bear / Crouching Yeti is an actor involved in several advanced persistent threat ( APT ) campaigns that have been active going back to at least the end of 2010 .
+142,0,Targeted sectors include .
+143,0,"Most of the victims we identified fall into the industrial / machinery building sector , indicating this is of special interest ."
+144,0,"To infect the victims , the attackers rely on three methods ."
+145,0,"During the attacks , the Crouching Yeti uses several malware / Trojans , which exclusively infect Windows systems ."
+146,1,"For command and control , these connect to a large network of hacked websites ."
+147,1,"These sites host malware modules , victim information and issue commands to infected systems ."
+148,0,"The dozens of known Yeti exploit sites and their referrer sites were legitimate , compromised sites ."
+149,0,They ran vulnerable content management systems or vulnerable web applications .
+150,0,None of the exploits used to compromise the servers were known to be zero - day .
+151,0,None of the client side exploits re - used from the open source metasploit framework were zero - day .
+152,0,"Overall , we observed about 2,800 victims worldwide , the most prevalent attack tool being the Havex Trojan ."
+153,0,We believe this group is highly determined and focused on a very specific industrial sector of vital interest .
+154,0,It uses a variety of ways to infect its victims and exfiltrate strategic information .
+155,0,The analyzed data seems to suggest the following points .
+156,0,This report provides technical details on how they perform their operations .
+157,0,This section analyzes all the aspects we could find about how this actor performs its campaigns .
+158,0,"The Crouching Yeti actor performed a massive surveillance operation targeting strategic victims , many of them in the industrial / manufacturing sector ."
+159,0,"There were different ways of delivering of its malware including waterholing , spearphishing and adding malware to legitimate installers ."
+160,1,"Once the victims were infected , Crouching Yeti selected different RATs for its operations ."
+161,1,"These RATs communicated with Command and Control servers on compromised servers around the world , using a simple PHP backend ."
+162,0,"We were able to identify several victims , including high - profile ones and dozens of domains used in the campaign ."
+163,0,As far as we know the group behind Crouching Yeti delivers its malware using at least three different methods .
+164,0,The first method uses a legitimate software installer repackaged to contain the malicious DLL .
+165,1,"Such modified self - extracting archives could have been uploaded directly to a compromised server , replacing the original file , or sent to the victim by email ."
+166,1,One example of this method was a hijacked SwissRanger camera driver ( libMesaSR version 1.0.14.706 ) that was used to drop the Sysmain backdoor to .
+167,1,% APPDATA%\sydmain.dll and set the Run registry value to load malicious DLL upon next system startup .
+168,1,"In a similar manner , as early as January 2014 , Havex version 038 appears to have been dropped by a legitimate ~40 MB software installer from the eWon web site ."
+169,0,"hxxp://www.ewon.biz / software / eCatcher / eCatcherSetup.exe "" eWon "" is a Belgian producer of SCADA and industrial network equipment , which helps define this attack method as a watering hole attack ."
+170,1,""" Breaking the barrier between industrial applications and IT standards , the mission of eWON is to connect industrial machines securely to the Internet , enabling easy remote access and gathering all types of technical data originating from industrial machines ... Connecting machines across the Internet is our mission . "" Sometimes , the Havex loader was dropped from "" eCatcherSetup_v4.exe "" , so it seems that the site operators may have removed a previous file and the attackers replaced it with their trojanized installer , and so on ."
+171,0,"Likely , the attackers gained access to eWon 's ftp site and replaced the legitimate file with one that is bound with the Havex dropper several times ."
+172,0,Another example that involves a hijacked application from a PLC - related vendor is a Trojanized mbCHECK installer which replaced the original legitimate version freely downloadable from the vendor 's website .
+173,0,The legitimate version can be downloaded for free from the vendor 's website .
+174,0,The vendor - MB Connect Line - is a company which specializes in software for remote maintenance of PLC systems : MB Connect Line GmbH(hxxp://www.mbconnectline.com / index.php / en/ ) .
+175,0,"In this case , the dropped DLL was Havex version 043 ."
+176,1,The second method relies on a malicious XDP file containing the PDF / SWF exploit ( CVE-2011- 0611 ) and was most probably used in spear - phishing attacks .
+177,0,"This exploit drops the Havex loader DLL , which is stored in an encrypted form in the XDP file ."
+178,0,The exploit is delivered as an XDP file ( XML Data Package ) which is actually a PDF file packaged within an XML container .
+179,1,This is a known the PDF obfuscation method and serves as an additional anti - detection layer .
+180,0,The XDP file contains an SWF exploit and two files ( encrypted with XOR ) stored in the invalid section of the PDF .
+181,0,"One of the files is Havex DLL ( version 038 ) , the other is a small JAR file which is used to copy and run the DLL by executing the following command ."
+182,0,"cmd /c copy < fname_passed_as_param > % TEMP%\\explore.dll /y & rundll32.exe % TEMP%\\explore.dll , RunDllEntry SWF executes the action script , which contains another SWF file which in turn uses the CVE- 2011 - 0611 vulnerability to run the shellcode ."
+183,0,"The shellcode then looks for a specific signature in the memory ( which signs the start of encrypted DLL ) , decrypts and loads it ."
+184,0,"Finally , this actor actively compromises legitimate websites for watering hole attacks ."
+185,0,"These hacked websites in turn redirect to malicious JAR or html files hosted on other sites maintained by the group ( exploiting CVE-2013 - 2465 , CVE-2013 - 1347 , and CVE-2012 - 1723 in Java 6 , Java 7 , IE 7 and IE 8) , which then drop the Havex loader , the Karagany backdoor and helper tools ."
+186,0,"These sites run an exploit kit known as "" LightsOut "" ."
+187,0,"It appears that the "" LightsOut "" exploit kit is exclusively used by Energetic Bear / Crouching Yeti ."
+188,0,"From the dozens of Yeti exploit sites we reviewed , the malicious code was nothing more than slightly modified metasploit java exploits delivering the Havex loader ."
+189,0,Some sort of internal review must have pushed them towards the LightsOut EK .
+190,0,KSN data records help provide a list of Crouching Yeti related exploit delivery from dozens of these sites .
+191,0,"In earlier cases ( July 2013 ) , successful Java exploitation served from nahoonservices.com would cascade into more Yeti components planted on victim systems ."
+192,0,"The java exploit downloaded Karagany backdoors , which in turn downloaded stealers from 91.203.6.71 ."
+193,0,"Ksn data recorded at least 20 victim sites that were compromised and injected with Yeti iframes , redirecting hundreds of visitors to compromised Yeti exploit sites ."
+194,0,"Most of these redirector sites were owned by western and Eastern European power players , investors , legal advisors and advocates , and European and US industrial IT equipment makers ."
+195,0,"The compromised sites hosting the LightsOut Exploit Kit were fairly trafficked , legitimate sites ."
+196,0,"Their content varies widely , from California winemakers to Cuban travel agencies and Iranian general interest / religious inspiration sites ."
+197,0,"Finally , other second stage tools were simply retrieved by the downloaders over http from various servers ."
+198,0,"Some of these Yeti sites , like kinoporno.org , served both Havex and these tools ."
+199,0,KSN events recorded the sites serving Windows Credential Editor and custom credential and document stealing tools .
+200,0,The Crouching Yeti group has different tools of choice for their operations .
+201,0,This section describes them from a technical perspective .
+202,1,The main functionality of this component is to download and load additional DLL modules into the memory .
+203,1,These are stored on compromised websites that act as C&C servers .
+204,1,"In order to do that , the malware injects itself into the EXPLORER.EXE process , sends a GET / POST request to the PHP script on the compromised website , then reads the HTML document returned by the script , looking for a base64 encrypted data between the two "" havex "" strings in the comment tag < ! --havexhavex-- > and writes this data it to a % TEMP%\<tmp>.xmd file ( filename is generated by GetTempFilename function ) ."
+205,0,"In the meantime , another routine is constantly checking the % TEMP% folder for all * .xmd files ."
+206,1,"For each file it finds , it decompresses the content , decrypts ( if encrypted ) and loads into the memory as the DLL ."
+207,1,"In order to run on each system boot , malware copies itself to : < path>\TMPprovider0XX.dll and creates the autorun registry key ."
+208,0,All samples of this component contain a statically linked bzip2 library .
+209,0,"Versions > = 01B also contain an RSAeuro library , used to encrypt log files and decrypt downloadable modules ."
+210,0,Public keys for encryption are hardcoded in the binary and/or stored in the configuration section .
+211,1,"In some cases , these keys are written to the registry values ."
+212,0,"In total , we identified 124 different samples of Havex loaders , belonging to 27 different versions ."
+213,0,"As of June 2014 , the latest version number we have is 044 ."
+214,0,"The URL addresses of the C&C servers ( which are indeed compromised websites ) are either hardcoded in the binary , or - in versions = > 038 - specified in the configuration section inside the ICT resource ."
+215,0,This resource is compressed with bzip2 and encrypted with XOR .
+216,0,"There are usually 2 - 4 URLs per binary , different for each malware version and sometimes also different between samples of the same version ."
+217,1,Malware sends a GET request ( versions < 017 ) or POST request to the first available URL .
+218,0,"The request contents depends on the malware version and it may include such information as unique bot i d , malware version number , OS version number , and some other data from configuration , as well as the harvested information logged into the * .yls file ( if any ) ."
+219,0,Then the malware searches the HTML code of each returned page for havex markers and saves the data between the markers into a temporary file .
+220,0,These modules are hosted between the havex markers in the HTML code of compromised websites .
+221,0,"The module code is usually XORed with "" 1312312 "" then compressed with BZIP2 and finally base64 encoded ."
+222,0,"Once downloaded into the % TEMP%\*.xmd file by the main Havex DLL , the code is decoded , decompressed , saved into the temporary DLL file and loaded into the memory ."
+223,1,"The modules perform a variety of different actions , including collecting information about the victim 's system and other machines in the local network , harvesting passwords , listing documents , etc ."
+224,0,"In order to do that , some of the modules make use of additional 3rd stage 3rd party executables ."
+225,0,Each module contains configuration information stored in an encrypted and compressed form inside a resource .
+226,0,"Configuration data includes 29-byte UID ( unique ID ) , a 1024-bit RSA Public key ( base64 encoded ) and other necessary info ( like file paths , etc . ) ."
+227,0,"All harvested data is compressed , encrypted and written into the % TEMP%\*.yls files , which are then sent to the C&C by the main Havex / Sysmain module ."
+228,0,"The "" yls "" files are encrypted with the 3DES crypto algorithm using a random 192-bit key ( 168 bit effective ) ."
+229,0,The 3DES key is encrypted using the public RSA 1024 key and therefore never transferred in plain text to attackers .
+230,1,In - depth analysis of the cryptography used by log files is presented in Appendix 2 This module is designed to collect detailed data about the OPC servers running in the local network and save them to a % TEMP%\{rand}.yls file .
+231,0,"To query the OPC servers , it uses the following interfaces ."
+232,1,"This module collects basic information about the system it 's running on , and saves it to the % TEMP%\{rand}.yls file ."
+233,0,Harvested data includes .
+234,0,This module collects contact details stored in all outlook.nk2 files and writes them to the % TEMP%\{rand}.yls file .
+235,0,Outlook.nk2 is the file where Outlook ( version since 2007 ) keeps contact details in order to use them with the AutoComplete feature .
+236,1,This module uses the embedded BrowserPasswordDecryptor 2.0 tool ( hxxp://securityxploded.com / browser - password - decryptor.php ) to dump login credentials stored by the password managers of various browsers .
+237,1,"Decrypted passwords are saved into the % TEMP%\~tmp1237.txt file , which is then copied by the parent module into an encrypted * .tmp.yls file ."
+238,0,List of browsers supported by the tool ( from the product 's website ) .
+239,1,This module is designed to scan the local network and look for all hosts listening on ports related to OPC / SCADA software .
+240,1,Information about these hosts is then saved to the % TEMP%\~tracedscn.yls file .
+241,0,In - depth analysis of the Havex loader and its related modules is presented in Appendix 2 .
+242,0,This component is a simple downloader with a functionality similar to the Havex component .
+243,1,It sends requests to the PHP script at the C&C ( compromised website ) and looks for specific data in the returned HTML code .
+244,0,It writes the data ( some ASCII strings ) from between < I6></I6 > tags to the file in % TEMP%\Low\~task.tmp and the data ( binary data XORed with 0x0A ) from between < B6></B6 > tags into the % TEMP%\Low\~ldXXXX.TMP file .
+245,0,Then it decrypts the ldXXXX.TMP file and loads it into memory .
+246,1,"Based on the compilation times , we may assume that this loader was used to download and run modules before it was replaced by Havex ."
+247,0,The Ddex loader is analyzed in more detail in Appendix 4 .
+248,1,"This malware can be described as a classical RAT ( Remote Access Trojan ) , since it gives the attacker a wide range of opportunities to control and interact with the victim machine ."
+249,1,The autonomous part of Sysmain installs and registers itself to be persistent in the system .
+250,1,"Then it gathers general information about the victim system , like When ready , this data is submitted to one of the C&C - servers ."
+251,1,"After that , it checks periodically for new commands from C&C ( pulling via HTTP ) ."
+252,0,"With a set of 11 commands , the malware is able to ."
+253,0,There are also commands used for maintenance purposes .
+254,1,"Among others , there are commands to change the pubkey for C&C - communication or delete its traces in the registry ."
+255,1,It receives its commands from one of four static command - and - control servers .
+256,0,Every variant of this malware has its own set of servers .
+257,0,"As usual , the attackers are using webservers - most likely compromised ones - as part of their C&C - infrastructure ."
+258,0,"To communicate with the C&C - server , the Trojan makes use of asymmetric encryption with a hardcoded pair of private and public keys ."
+259,0,"Another public key is used to encrypt files , which are collected in a local dropzone on the victim 's file system ."
+260,0,"The files in that dropzone will be submitted to the attacker later , all in one go ."
+261,0,Appendix 3 provides in - depth analysis of the Sysmain backdoor .
+262,0,This component is written in .NET and is very similar to The Sysmain backdoor .
+263,0,The settings of the RAT are stored in the registry as BASE64 encoded values .
+264,1,"The RAT gets its commands by sending a request to a PHP script on the C&C ( compromised server ) as usual , and looks for specific data in the returned HTML code ."
+265,0,"The data in this case is stored between the havexhavex tags , it is then decrypted and decoded ( base64 ) ."
+266,0,The RAT supports 13 commands including .
+267,1,"Each time a command ( task ) is executed , the result of that command is stored in the registry under a subkey named "" done "" or "" doneEXT "" ."
+268,1,"The results ( which are called "" answers "" by the authors ) are then POSTED to the C&C server ."
+269,0,The ClientX backdoor is analyzed in depth in Appendix 5 .
+270,1,Karagany is a simple backdoor that connects to the C&C and keeps waiting for commands .
+271,1,"It can download and run additional executables , load / delete modules , read file content , reboot the computer , update itself and remove all components ."
+272,1,"Besides backdoor functionality , it also extracts credentials from Internet Explorer 's password manager to the prx.jpg file and injects a small DLL into the processes of web browsers ."
+273,1,This DLL keeps listening to outgoing network traffic and looking for basic access authentication details sent over unencrypted HTTP .
+274,0,"Affected browsers include Internet Explorer , Firefox , Mozilla and Opera ."
+275,1,"When executed , it copies itself to the folder under % APPDATA% and creates a .lnk file in the % STARTUP% directory ."
+276,0,The folder name and filename are chosen from a list of strings hardcoded in the binary .
+277,0,"It also creates the C:\ProgramData\Mail\MailAg\ folder , where the information harvested by downloaded modules will be stored ."
+278,1,"After checking if a connection to the Internet is up , it sends an initial POST request to the C&C server ."
+279,0,Known parameters used in C&C communication are .
+280,0,This module is used to drop and run the DuckLink CmdCapture tool - a 3rd party freeware AutoIt application for capturing screenshots ( hxxp://www.ducklink.com/ ) .
+281,1,A screenshot of the desktop is saved into the C:\ProgramData\Mail\MailAg\scs.jpg file .
+282,1,"Additionally , other system information - such as the date and time of capture , computer name , username , cpu architecture , os version , IP address , logon domain and logon server , desktop details ( height , width , depth , refresh rate ) and environmental variables - are logged in C:\ProgramData\Mail\MailAg\scs.txt file ."
+283,1,"This module is used to list all files and documents with specified extensions , or which have names containing specified strings in the C:\ProgramData\Mail\MailAg\fls.txt file ."
+284,0,"Saved information includes path , size and modification time ."
+285,0,File matching patterns .
+286,0,"The Command and Control Servers are compromised legitimate websites , like Blogs , from different countries ."
+287,0,In total we have identified 219 unique domain names for these C&C servers hosted in 21 different countries .
+288,0,"We found most hosted C&Cs in the United States ( 81 servers ) , Germany ( 33 servers ) , the Russian Federation ( 19 servers ) and the United Kingdom ( 7 servers ) ."
+289,0,The table below shows the distribution of victims affected by the samples identified according to our KSN data .
+290,0,Victims infected with samples from any of the Crouching Yeti group 's malware were found in .
+291,0,"65 of these C&C servers , in the following countries , were monitored during our investigation ."
+292,0,This monitoring enabled us to get a list of the victims connected to them .
+293,0,"The C&C Backend is written in PHP , consisting of 3 files ."
+294,0,"The Backdoors interact with "" source.php "" , which is the control script ."
+295,0,These are its functions on execution .
+296,0,1 .
+297,0,Collect the following information .
+298,0,2 .
+299,0,"Write the above information to "" testlog.php "" , separated by "" Tabulator "" and base64- encoded , with the following syntax ."
+300,0,< timestamp>\t < victim ip - address>\t < proxy>\t < botID>\t < request - uri>\t < useragent > 3 .
+301,0,"Write all transferred HTTP - GET Variables to "" < botID>.log "" , separated by "" Tabulator "" and base64-encoded ."
+302,0,4 .
+303,0,"If the bot executes an HTTP - POST - request , the transferred data is written to the file "" < botID>.ans "" , enclosed in "" xdata ""- Tag with timestamp ."
+304,0,"( "" ans "" is the acronym for "" Answer "" ) ."
+305,0,5 .
+306,0,"Check for any "" < botID>_*.txt "" files a."
+307,0,"If found the first step is to append the timestamp , filename and a "" sent "" Status indicated to "" < botID>.log "" ."
+308,0,"Then the file content is transferred to the bot , embedded into HTML with the HTML - Body "" No data ! "" and the HTML - Comment "" havex "" , which contains the data to be transferred ."
+309,0,Finally the file on the server is removed .
+310,0,"If this removal fails it is logged to "" < botID>.log "" ."
+311,0,b.
+312,0,"If no matching file is found , an HTML - Response is sent with an empty "" havex "" HTML - Comment and HTML - Body text "" Sorry , no data corresponding to your request . "" The term "" victim "" in this section refers to a botID ( unique String of the Backdoor ) , connecting to one or more C&C Servers ."
+313,0,"Based on the 45 C&C Servers wemonitored , a total of 2,811 unique Victims were discovered ."
+314,0,The average number of victims per C&C is 70 .
+315,0,The following chart depicts the first ( red line ) and last ( blue line ) appearance of each victim on the C&C.
+316,0,"The "" FirstHit "" shows how the rate of accumulating new victims has accelerated over the course of 2014 ."
+317,0,""" LastHit "" shows how the last connection of victims to C&C servers also increases over time ."
+318,0,"This could mean victims are disinfecting their computers , or it may be that they simply report to a different C&C server that we do not monitor ."
+319,0,"Mapping the unique hits of victims per day also indicates a decrease of "" active "" infections ."
+320,0,The following chart clearly shows a difference between weekdays ( groups of five higher bars ) and weekends ( two lower bars ) .
+321,0,The daily unique hit - rate fell by about half from around 800 connections at the beginning of 2014 to around 400 connections per week - day by the middle of the year .
+322,0,More than half of the victims always connect from the same IP address .
+323,0,Fewer than half of the victims connect from two or more different IP addresses as the following graph shows .
+324,0,"This might indicate that some of the victims are behind proxies , which makes sense for corporate environments ."
+325,0,Victims using many different IP addresses may indicate laptops .
+326,0,The following chart visualizes all the unique victims connecting to C&C servers .
+327,0,The main C&C Servers can be clearly seen in Russia and the USA .
+328,0,The victims are distributed across 99 different countries .
+329,0,"From the total of 2,811 victims , it was possible to accurately identify 106 of them ."
+330,0,Appendix 8 contains a brief description about the sector / company in which these victims operate .
+331,0,The table below summarizes the distribution of the identified victims by sector .
+332,0,"Based on our monitoring , the most widespread Backdoor is Havex with a total of 2,470 infected systems , mostly based in USA and Spain ."
+333,0,"32 different versions of Havex are used among all victims , with 51 victims left without any identifiable Havex version ."
+334,0,"Havex Version 024 , compiled at the end of 2012 , is the most widespread ."
+335,1,"Besides the Havex version , the OS Version of the victim computer is also communicated to the C&C server ."
+336,0,"The most common Operating System among victims is Windows XP , but Windows 8.1 is also on the list ."
+337,0,"The Sysmain victims connect to six of the monitored C&C servers , where 261 unique victims were counted , located in 38 different countries ."
+338,0,"Victims of the Clientx backdoor connect to 2 of the monitored C&C Servers , where 10 unique Victims were counted in 5 different countries ."
+339,0,Based on the analysis of the monitored C&C Servers we can identify some clusters based on malware versions and the victims .
+340,0,This graph visualizes these relations .
+341,0,"Every dot represents a victim , different Backdoors and versions are colored differently ."
+342,0,The C&C Servers are also represented as dots where several clients connect .
+343,0,Grey lines are connections from a victim to its C&C Server .
+344,0,Some C&C Servers are dedicated to a given version of a backdoor ( big Cluster ) .
+345,0,Others share connections with different backdoor versions and different backdoors .
+346,0,"Breaking this down to the sectors of the identified victims , we can not see any correlation between C&Cs and victims ."
+347,0,The same sectors are targeted with different backdoor versions .
+348,0,Compared to our other APT research the available data is more non - specific than usual .
+349,0,"There simply is no one piece or set of data that would lead to the conclusion that the threat actor is Bear , Kitten , Panda , Salmon , or otherwise ."
+350,0,Significant data points below .
+351,0,"It is rare to see file timestamps used as a precise , primary source of information when it comes to threat actor attribution ."
+352,0,"In previous reports , these timestamps have been used as supporting , or secondary pieces of data ."
+353,0,"They may help to suggest or support a time range for attacker activity , but they are very easily modified ."
+354,0,So it is not very helpful to focus on this data set .
+355,0,"The strings present in the backdoors , web components , and exploits are in English ."
+356,0,"Almost 200 malicious binaries and the related operational content all present a complete lack of Cyrillic content , the opposite of our documented findings from researching Red October , Miniduke , Cosmicduke , Snake , and TeamSpy ."
+357,0,The OPC module strings include typos and bad grammar .
+358,0,Some are so bad they are almost silly and there does n't seem to be a consistent pattern here .
+359,0,Programm was started at % 02i:%02i:%02i Start finging of LAN hosts ...
+360,0,Finding was fault .
+361,0,Unexpective error Was found % i hosts in LAN : Hosts was't found .
+362,0,There are also three interesting strings inside the Karagany backdoor .
+363,0,"identifiant ( which is French for identifier ) , fichier ( French for file ) and liteliteliteskot ( lite scot is Swedish for little sheet ) Timestamp analysis is based on a total of 154 collected binaries ."
+364,0,Highlights .
+365,0,Activity / Year ( all samples ) .
+366,0,Activity / Weekdays based on compilation time .
+367,0,Activity / Hours ( UTC ) based on compilation time .
+368,0,All the exploit servers delivered slightly modified ripped content from open source repositories .
+369,0,All the servers appear to be hacked servers .
+370,0,"According to the available data , no zero - day exploits were used in any of these attacks , either to compromise the servers in the first place , or delivered as client side attack exploits by the Lights Out Exploit Kit ."
+371,0,"While this purely malicious re - use of metasploit PoC highlights the danger that these attack tools pose , it is also unusual to see an exclusively metasploit attack toolset effectively used in this way , delivered from what appear to be a chain of higher value compromised sites ."
+372,0,All of these compromised web applications were vulnerable to freely available offensive security tools .
+373,0,We acknowledge that many of the compromised referrer servers were related to power producers in some way .
+374,0,"However , these targets almost seem an afterthought , as the exploit servers themselves were compromised web servers from Cuban travel agency sites , a Californian winery site , a US based women 's fashion site , an Iranian general interest / religious inspiration site , a number of dating and adult content websites , and a variety of others ."
+375,0,"Although , we note that the known Trojanized software packages were ICS / SCADA related as well , possibly because those victim sets or environments required special attention ."
+376,0,"So , while there was a strong set of offensive activities on power producers during the campaigns , it was by no means the full focus of them ."
+377,0,"While it may be "" shocking "" to observe power producers around the world targeted by any one threat actor , this actor 's attack activity does not appear to be constrained to power producers ."
+378,0,"The related industries of interest show a much broader global scope than previously discussed , and the geographic regions of interest have gone completely undiscussed ."
+379,0,"For example , Spain had the highest number of victims ."
+380,0,"However , it appears that there was no significant correlation between the victim location and the C&C geolocation ."
+381,0,"And , according to our data , the list also includes victim organizations fitting the following additional categories ."
+382,0,"The Crouching Yeti actor has been performing massive surveillance campaigns in recent years , since at least 2010 ."
+383,0,"Their targets included thousands of victims of which we were able to identify a few , confirming Crouching Yeti 's interest in several strategic sectors ."
+384,0,"The distribution strategy of the group focuses on methods following this targeted philosophy , including spear phishing and waterholing ."
+385,0,"Noticeably , they also compromised legitimate software packages from strategic actors in the SCADA sector in order to infect their final victims ."
+386,0,The victim list confirms that the tactic proved successful .
+387,0,"There is nothing especially sophisticated in their exploits , or in the malware they used to infect victims ."
+388,1,Their RATs are flexible enough to perform surveillance and data exfiltration efficiently .
+389,0,"They used dozens of compromised servers as Command and Control domains with a simple , but effective , PHP backend ."
+390,0,However there is an interesting connection with this group and the LightsOut Exploit Kit for the distribution of its malware in some waterholing attacks .
+391,0,We believe they are likely its only operators as of June 2014 .
+392,0,"Thanks to the monitoring of several of the Command and Control domains used by the group , we were able to identify several victims ."
+393,0,"This victims ' list reinforces the interests shown by the Crouching Yeti actor in strategic targets , but also shows the interest of the group in many other not - so - obvious institutions ."
+394,0,"We believe they might be collateral victims , but it might also be fair to redefine the Crouching Yeti actor not only as a highly targeted one in a very specific area of interest , but a broad surveillance campaign with interests in different sectors ."
+395,0,We will continue monitoring this actor .
+396,0,The experts of G DATA 's SecurityLabs discovered a cyber - espionage campaign that perfectly exemplifies the way how targeted attacks work .
+397,0,The purpose of this campaign was to steal valuable documents from the targeted entity .
+398,0,"We entitle this operation "" TooHash "" ."
+399,1,The attackers ' modus operandi is to carry out spear phishing using a malicious Microsoft Office document as an attachment .
+400,0,"The attackers do not choose their targets indiscriminately , which we derive from the fact that they sent specially crafted CV documents , probably to human resources management employees ."
+401,0,"Naturally , the recipients are inclined to open such documents on a daily base ."
+402,0,The majority of discovered samples were submitted from Taiwan .
+403,0,"As part of the documents are in Simplified Chinese which is used in the Chinese mainland and others in Traditional Chinese which is used in Hong Kong , Macao and Taiwan , these malicious documents might have been used against targets in the whole Greater China area ."
+404,1,"The attached documents exploit a well - known and rather aged vulnerability ( CVE-2012 - 0158 ) to drop a remote administration tool , or RAT for short , onto the targeted user 's computer ."
+405,0,"During the campaign , we identified two different pieces of malware ."
+406,1,"Both include common cyber - espionage components such as code execution , file listing , document exfiltration and more ."
+407,1,"We discovered more than 75 command and control servers , all used to administrate infected machines ."
+408,0,The servers were mainly located in Hong Kong and the USA .
+409,0,"Furthermore , the administration panel 's language , used by the attackers to manage infected systems , was partly written in Chinese and partly in English ."
+410,0,The exploit used by the attackers is identified and blocked by G DATA 's Exploit Protection technology and G DATA 's security solutions detect the dropped binaries as Win32.Trojan . Cohhoc . A and Win32.Trojan . DirectsX.A respectively .
+411,0,"Nowadays , trade secrets describe one of the major values of almost every company ."
+412,0,"Therefore , begrudged competitors may be tempted to steal valuable sensitive information for their purposes ."
+413,0,The leak of sensitive documents can be a disaster for a company and lead to large financial losses .
+414,0,"Furthermore , governmental entities use sensitive , private or classified documents ."
+415,0,Intelligence agencies may be interested to obtain such documents .
+416,0,"The analyzed samples used in the "" TooHash "" campaign were Microsoft Office documents , and were submitted to us from a Taiwanese customer ."
+417,0,"An indication leading to the target area is one of the documents used by the attackers , which contained the string "" 102年尾牙、 "" which means "" end of the year 102 "" ."
+418,0,"The official calendar used in Taiwan starts in 1912 ( year 1 ) , so the year 102 is the year 2013 according to the Gregorian calendar ( 1911 + 102=2013 ) ."
+419,0,"We conclude that the targets are entities located in the Greater China area and on the name of another document used by the attacker called 李辉简历.doc which translates to "" resume of Li Hui "" ."
+420,0,"Another lead , suggesting that the attacks occurred in the Greater China area , is the fact that the majority of samples available on VirusTotal were originally submitted from Taiwan ."
+421,0,The DNS - name of the C&C server contained information about affected companies .
+422,0,Here is a list of some targeted entities .
+423,1,"To drop the malware onto the targeted computer and to control the system , the attackers chose to carry out a spear phishing campaign ."
+424,0,This campaign comprised a Microsoft Office document being sent to the victim .
+425,0,A probable entry point for a manipulated CV would be an HR department .
+426,0,"If the document is opened with an outdated Microsoft Office version , malware is installed by exploiting vulnerability CVE-2012 - 0158 ."
+427,0,"To appear credible , the attackers selected the targeted users and the type of the attached documents cleverly ."
+428,0,"For example , a Microsoft Office Word document called resume of Li Hui.doc ."
+429,0,The document title as well as the content was written in Simplified Chinese .
+430,0,The titles of the attacking documents involved are as follows .
+431,0,"To explain the exploit used , we have a look at the Word document , the ostensible CV ."
+432,0,"The mentioned exploit causes Microsoft Word to crash , which might alert attacked users just right away ."
+433,0,"In our case , the attackers crafted their malicious document in a special way to conceal the software crash : The malicious .doc causes a crash , but moments after the crash a legitimate Word session opens up and , to the user , everything appears to be normal ."
+434,0,"Nevertheless , cautious users might suspect malicious actions behind such activities and notify security staff ."
+435,0,The CV that comes with the legitimate Word document ( Wo.doc ) is written in Chinese characters and style used in the Chinese mainland .
+436,0,"Nevertheless , this sample has also been submitted to us from Taiwan ."
+437,0,"The resume visible to the user ( Wo.doc ) holds a tracking mechanism : Li Hui 's picture , visible in the document as the blank square on the right hand side , is not stored locally but stored on the Internet ."
+438,0,"The following tag , inside the document , reveals this function ."
+439,1,"As soon as the document is loaded , a network query is performed and notifies the attacker about the successful exploit and the availability of a newly infected machine ."
+440,0,We identified two types of malware used to administrate the infected machines : Cohhoc and DirectsX.
+441,0,"The first one is a "" classic "" Remote Administration Tool ."
+442,0,"The second one is more advanced and of a different kind , the malware is a rootkit ."
+443,0,It is executed in kernel mode .
+444,0,The RAT and the rootkit both share the same command and control infrastructure .
+445,0,The malware is divided into three parts .
+446,0,The second component is installed into a subfolder of the directory % APPDATA% ( for example in % APPDATA%\Microsoft\ ) .
+447,0,Known file names for the files used during the campaign discussed : svchost.exe and conime.exe .
+448,0,The second component works similarly .
+449,0,"In case you are interested in information regarding the unpacking of this malware , please feel free to contact us using toohash.securityblog@gdata.de During the TooHash campaign , we were able to identify two variants of "" Cohhoc "" ."
+450,0,Those two versions can be distinguished by looking at the creation of the respective mutex after the malware is started .
+451,0,The main difference between the two malware variants is the handling of the payload ( component three ) .
+452,0,"In the earlier version , the payload is located within a resource inside component two ."
+453,0,"In the later version , the payload is an additional file ."
+454,0,This additional file is stored in the same directory as the second component and its name is brndlog .
+455,0,"As small as this difference seems to be for a normal computer user , from a malware analyst 's point of view , it is a huge difference ."
+456,0,"If , in the first case , the sample was found within a sample database , the analyst would be able to extract the payload and to analyze it right away ."
+457,0,"However , in the second case , the analyst can not extract and analyze the payload at all ."
+458,0,"In this context , the second component alone is rather useless ; one needs to find the binary which installs the payload ."
+459,0,"Furthermore , it is rather complex to create signature detection for an encrypted file , such as the payload discussed ."
+460,1,Persistence is ensured by the creation of a shortcut file ( .lnk ) in the Start Menu folder .
+461,0,This shortcut is labeled as Internet Explorer .lnk .
+462,0,The blank space just before the file name extension was inserted to trick the user .
+463,0,The text looks exactly like the original without the additional space .
+464,0,"Furthermore , it is not only the file 's name which sidetracks , but also the icon used for this link comes in the disguise of Microsoft 's Internet Explorer ."
+465,0,"The screenshot below reveals that the actual file behind this shortcut points to a different program : conime.exe : The "" Cohhoc "" malware is a Remote Administration Tool and is able to ."
+466,0,"Within the samples , we found two different hardcoded command and control servers and a feature to easily choose an alternative server ."
+467,0,"If the file % APPDATA%\Adobe\ActiveX.dat exists on the system , the malware uses the server listed in this file instead of the hardcoded servers ."
+468,0,The content in the file must use the obfuscation system described in the next chapter .
+469,0,"This approach , using an extra file with server information , proves to be particularly useful for the attackers , as they do not have to transmit new payload to the infected system ."
+470,0,"Furthermore , it keeps analysts in the dark about additional C&Cs in case they only see the .dat file ."
+471,0,This file alone is rather useless .
+472,0,We have seen the same technique when looking at the differences between the two malware variants before .
+473,1,"The "" Cohhoc "" malware uses an obfuscation layer , to disguise the malware and to complicate the analysis ."
+474,0,The obfuscation is used .
+475,0,This algorithm can easily be adapted in C language .
+476,0,Fellow researchers are welcome to receive the code after contacting samplerequest@gdata.de .
+477,0,"To be readable and easily usable , the base64 encoded data ( in binary format ) is converted into ASCII ."
+478,0,Here is an example to decode a command and control .
+479,0,The malware uses HTTP to communicate to the command and control servers .
+480,0,Here is an example of a request performed by an infected system .
+481,0,The relevant data is placed after the GET request .
+482,0,"Here is the content of the request , decoded by using the code mentioned above ."
+483,0,Here are the different parts of the data transmitted .
+484,0,The dropper is used to install two files and the persistence mechanism .
+485,0,The two files are DirectsX.sys ( the malicious driver ) and directsx ( without any extension ) .
+486,0,The second file is the encoded payload used by the driver .
+487,1,The persistence mechanism is realized by the creation of a service .
+488,0,The installed file and the registry modifications are stored in a resource within the dropper .
+489,0,Here is a screenshot of the registry key created .
+490,0,The dropper and the driver are both signed by a legitimate certificate .
+491,0,"The certificate is owned by "" Jiangxi you ma chuang da software technology Co. , LTD "" , has been reported stolen and is known to have been used in APT attacks ."
+492,0,Here is a screenshot of the certificate .
+493,0,The main purpose of the driver is to decode the content of the directsx file and to inject the payload into a userland process .
+494,0,The algorithm used to encode the data in the file is a XOR followed by a SUB .
+495,0,The values of the XOR and the SUB can be different .
+496,0,The decoding file contains the configuration ( command and control ) and a library ( .dll ) to inject in userland .
+497,0,Here is an example of configuration .
+498,1,"Actually , the library is injected into the process of BitDefender ( seccenter.exe ) , ZoneAlarm ( svchost.exe ) or 360 ( 360tray.exe ) , which means that three popular security products are abused ."
+499,1,"If the processes are not running on the infected system , the injection is performed into explorer.exe ."
+500,0,"To perform the injection , the driver uses the API KeStackAttachProcess ( ) ."
+501,0,This function allows it to attach the current thread to an address space of a userland process .
+502,0,The name of the rootkit is linked to its device name : \\device\DirectsX and its symbolic name : \\DosDevices\DirectsX.
+503,0,"The injected dll is signed with the same certificate , too ."
+504,0,"It is the remote administration tool itself , injected by the rootkit ."
+505,0,The tool allows the attackers .
+506,0,This library is a variant of a remote administration tool also known as Savit .
+507,0,We identified more than 75 different servers .
+508,0,The complete list of domains is available in the appendix .
+509,0,The IP resolved by the domains changed frequently .
+510,0,"At the time of writing this report , all known C&C servers were mainly located in Hong Kong , with three different host companies ."
+511,0,A fourth host company used was located in the US .
+512,0,The IP ranges used by then .
+513,0,The choice of domain names was made to trick the users or the security team during their analysis of the web logs collected .
+514,0,Have a look at two examples used during the TooHash campaign .
+515,0,"For each domain , the attackers add a subdomain , the subdomain is generally assumed to be the name ( or the acronym ) of the targeted entities ."
+516,0,Here is an example : nspo.intarnetservices.com .
+517,0,"This could , in the context of the Greater China area , stand for the National Space Organization located in Taiwan ."
+518,0,"The attackers control infected machines with the help of web servers installed on the C&Cs , they do not need to have remote access ."
+519,0,"Here is the authentication page of the administration panel and aswe can see , the panel is partly written in Simplified Chinese ."
+520,0,We did not clearly identify the people behind this campaign .
+521,0,"The use of the stolen certificate could point the Shiqiang group , but nothing can be proven ."
+522,0,"Anyway , in our case , the attackers clearly targeted private business and governmental organizations as well ."
+523,0,Either the group decided to target governmental entities as well or the stolen certificate is used by several groups .
+524,0,"In any case , the attackers are well organized and use a huge and complex infrastructure to manage the infected systems ."
+525,0,"Furthermore , they use two different malware types in order to always have access to the targeted organizations even if one malware is detected ."
+526,0,The second malware becomes a spare wheel .
+527,0,We assume that the people behind the group are professionals .
+528,0,"This campaign showed us once more , that people do not hesitate to use sophisticated and deceptive methods to steal data from companies or governmental organizations ."
+529,0,The files submitted to us seem to have targeted companies in the Greater China area but this technology can easily be used against organizations in other countries and regions across the globe .
+530,0,"Due to the increasing value of nowadays ' trade secrets and political secrets , we believe that the use of this kind of sponsored campaign is very likely to increase in the future ."
+531,0,"Companies and other entities as well need to increase their security measures and to educate the users about the risks they might encounter while working with a computer – ranging from social engineering to malware attacks , etc ."
+532,0,The exploits used during this campaign are detected by G DATA 's exploit protection system and the files involved are detected by our antivirus engines .
+533,0,"In case you would like to receive further technical information or would like to contribute any information to this case , please feel free to contact us by using the following email address : toohash.securityblog@gdata.de Documents ( and the original name ) ."
+534,0,Cohhoc samples .
+535,0,DirectsX samples .
+536,0,"% USERPROFILE%\Start Menu\Programs\Startup\Internet Explorer .lnk % APPDATA%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Internet Explorer .lnk % APPDATA%\Adobe\ActiveX.dat % APPDATA%\Adobe\ActiveX.bat % APPDATA%\Microsoft\conime.exe % APPDATA%\Microsoft\conime.exe.en % TEMP%\svchost.exe % TEMP%\war.exe % TEMP%\Wo.doc % SystemRoot%\System\directsx.sys % CommonProgramFiles%\System\directsx \\Device\DirectsX \\DosDevices\DirectsX * .cnnic - micro.com * .proxydomain.org * .dyndns - office.com * .kmdns.net * .privnsb.com * .adobeservice.net * .webmailerservices.com * .intarnetservice.com In case you wish to have information about the IPs involved , please get in touch with us via toohash.securityblog@gdata.de"
+537,0,Disclaimer : CrowdStrike derived this information from investigations in non - classified environments .
+538,0,"Since we value our client 's privacy and interests , some data has been redacted or sanitized ."
+539,0,"Crowdstrike presents "" Mo ' Shells Mo ' Problems "" - A four part series featuring two unique web shells used by a Chinese threat group we call Deep Panda ."
+540,0,The series will culminate with a CrowdCast in April 2014 detailing a case study of the incident response investigation conducted to identify these web shells .
+541,0,Special thanks to Josh Phillips of the CrowdStrike Global Intelligence Team for providing the technical analysis in this blog post .
+542,0,"Today we 'll cover part one of this series , which provides an overview of what web shells are , functionality of two web shells recently identified during an incident response investigation and how they were leveraged by the attacker ."
+543,0,Parts two through four will provide details on successful analytical techniques you can use to discover web shells within your environment .
+544,0,"A Web Shell is a file containing backdoor functionality written in a web scripting language such ASP , ASPX , PHP or JSP ."
+545,0,"When a web shell is hosted on an internet facing victim system , an adversary can remotely access the system to perform malicious actions ."
+546,0,"Deep Panda is a China based threat group CrowdStrike has observed targeting companies in the defense , legal , telecommunication and financial industries ."
+547,0,Crowdstrike has observed Deep Panda adopting web shells as their primary access back into a victim organization .
+548,0,This is an interesting shift as web shells have typically been seen as only a first stage into obtaining a persistent foothold in an environment .
+549,0,"Previously , web shells were quickly abandoned once persistent second stage malware was successfully beaconing ."
+550,1,Using a web shell as a primary backdoor gives Deep Panda several advantages .
+551,0,"To assist organizations with identifying web shells in their environment , this post will cover two popular Deep Panda web shells ."
+552,0,"By gaining insight into their capabilities and footprint , organizations should find it feasible to detect and remediate these backdoors ."
+553,1,Showimg.asp is an example of an early stage web shell used to build an initial foothold within a network .
+554,0,"After it is replaced by more robust backdoors , it may be left in place as a last resort should remediation take place ."
+555,0,"At a diminutive 28 bytes , it is one of the smallest Active Server Page ( ASP ) backdoors in the wild ."
+556,0,"In a recent case , we witnessed this web shell written to a standalone file ( named showimg.asp ) , but it could easily be injected into an existing page , making it even stealthier ."
+557,0,The code for this web shell can be found below .
+558,0,ASP uses Microsoft Visual Basic ( VBScript ) as its implementation language .
+559,0,"The code above uses the chr ( ) function to convert an integer into a character , which is then passed as an argument to the ASP Request ( ) object ."
+560,0,The Request ( ) object will search the Query String for any keys matching the input .
+561,0,"In our case , the code is equivalent to Request . QueryString ( ' * ' ) ."
+562,0,"The request object will look for chr(42 ) which is an asterisk ( * ) , returning whatever is passed to it in a HTTP GET or POST ."
+563,0,"Next , the Execute ( ) function will execute any value returned by the lookup ."
+564,0,"Effectively , an attacker can form a request that will execute any VBScript code ."
+565,0,"As you might imagine , this is a powerful capability ."
+566,0,"For example , this code can perform any of the following actions ."
+567,0,"This web shell is an example of a "" thick client "" shell , meaning that while the server side code is quite small , attackers typically use a larger GUI client to construct the sent commands ."
+568,0,The client GUI runs on the attacker 's system and hence is not typically found within the victim network .
+569,0,"As a simple example of an encoded command , the following GET request would cause the backdoor to execute the code Response . Write("" < h1>Hello World</h1 > "" ) and would render "" Hello World "" to be printed in the web browser ."
+570,0,"Path : C:\inetpub\wwwroot\aspnet_client\system_web\<VERSION>\ MD5 Hash : cc875db104a602e6c12196fe90559fb6 File Size : 45187 Table 4 : Metadata of "" system_web.aspx "" System_web.aspx is an excellent example of a more robust web shell used to replace Deep Panda 's traditional beaconing command and control infrastructure ."
+571,0,"It is an ASP.NET backdoor written in C # , with far more capabilities than we saw with the showimage.asp sample ."
+572,0,The web shell supports a form of authentication to protect against unauthorized access .
+573,0,"This prevents its discovery from search engine indexing , vulnerability scanning tools and other unauthorized access to the backdoor ."
+574,0,"In order to bypass authentication , a user session must satisfy one of three options ."
+575,0,"Since web shells are text - based , we can easily see how this authentication takes place ."
+576,0,"First , the code checks if a cookie by the name of cp exists ."
+577,0,"If so , the response object has its End ( ) method invoked , denying the user access ."
+578,0,"Next , the code uses the IsValidUser()method and checks the Hyper Text Transport Protocol ( HTTP ) headers for the Keep - Alive value , which , if equal to 320 , will return true ."
+579,0,"If the value does not equal 320 the IsValidUser()method iterates over the Request . UserLanguages collection searching for a language named es - DN , and if found , the IsValidUser ( ) method will return true ."
+580,0,"If neither check passes , the code returns false and the code will finally check for the presence of a cookie named < REDACTED>."
+581,0,"If the cookie is present , the authentication step is satisfied ."
+582,0,"If not , a blank web page with no content is displayed ."
+583,0,"After successful authentication , the attacker is provided with the following page ."
+584,0,System_web.aspx packs a large amount of functionality into a compact interface .
+585,0,It provides the following capabilities .
+586,1,"The web shell supports 8 main commands , with most command execution via Transact - SQL using the xp_cmdshell function ."
+587,0,This command depends on the contents of the first unlabeled textbox1 .
+588,1,"If unlabeled textbox1 is empty , the code will enumerate attached drives ."
+589,0,Provider= or Driver= - Will connect using the OleDbConnection class .
+590,0,Data Source= - The code will connect using the SqlConnection class .
+591,0,"iis:// - If this appears in unlabeled textbox1 , the code will use data from the second unlabeled textbox2 to execute Active Directory requests ."
+592,0,This command also depends on the text contained in the unlabeled textbox1 .
+593,0,"If the field is left empty , the code will assume a valid path to a file on the local machine and will read and display contents to user ."
+594,0,Data Source= - the code will assume that the unlabeled textbox2 contains a valid SQL query and will execute it and display the results .
+595,0,"http:// - If this appears in unlabeled textbox1 , download content from the assumed URL ."
+596,0,"$ SEX – If this appears in unlabeled textbox1 , pass the contents to the Server . Execute ( ) method ."
+597,0,Execute contents in unlabeled textbox1 as a SQL query and return binary data to adversary .
+598,0,Execute contents in unlabeled textbox1 as a SQL statement and return valid textual data to adversary .
+599,1,Upload the file chosen by the Choose File button and save it to a temporary table in the database file worktbl in chunks of 10240 bytes .
+600,0,Then executes xp_cmdshell ( which executes the Bulk Copy Program ) to copy the data from that table to a file whose name is specified in unlabeled textbox2 .
+601,0,"After the file is saved , the code deletes the temporary table ."
+602,0,"If unlabeled textbox1 is a local file on infected system , the file is read and displayed to attacker ."
+603,0,"\\ - If unlabeled textbox1 starts with \\ , use xp_cmdshell to execute the copy command to copy file to % windir%\Temp\temp.bin ."
+604,0,"Then , issue the dir command and display results to user ."
+605,0,"Finally , delete the temporary file % windir%\Temp\temp.bin ."
+606,0,Perform Active Directory queries .
+607,0,"The code handles create , delete , set , get , and enum queries , while any query not matching those is executed directly ."
+608,0,All commands are executed using the System . DirectoryServices API .
+609,0,"Simple wrapper around the CSharpCodeProvider API , allowing the adversary to compile and execute arbitrary C # source code ."
+610,1,"Login Checkbox Attempt to use the username , password , and domain from the User , Pass and Domain fields and LogonUserA ( ) Win32 API function to impersonate a specific user ."
+611,0,Detatch Checkbox Specifies whether commands run from the Exec button will have their output redirected and displayed to the adversary when the command is finished executing .
+612,1,"In short , system_web.aspx provides an adversary with a very stealthy means of near full control of the server on which it resides ."
+613,1,This stealth might be its most important attribute .
+614,0,"As we will see , identifying web shells can be much harder than finding malicious binaries ."
+615,0,"In our next post , we will discuss techniques for identifying web shells ."
+616,0,"Stay tuned for Parts 2 - 4 as we cover File Stacking , Web Log Review , and Network Detection ."
+617,0,"In the meantime , register now for the April 1st CrowdCast ."
